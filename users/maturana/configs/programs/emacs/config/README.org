@@ -1,0 +1,237 @@
+#+TITLE: Emacs Config
+#+AUTHOR: Gabriel Maturana Teixeira
+#+PROPERTY: header-args :tangle init.el
+#+STARTUP: content
+
+* Disable some stuff
+   
+  #+begin_src elisp :tangle early-init.el
+    (scroll-bar-mode -1)
+    (menu-bar-mode -1)
+    (tool-bar-mode -1)
+
+    ;; disable default startup screen
+    (setq inhibit-startup-screen t)
+    (setq initial-scratch-message nil)
+  #+end_src
+   
+* Set the custom file
+
+  #+begin_src elisp
+    (setq custom-file (concat user-emacs-directory "custom.el"))
+    (when (file-exists-p custom-file)
+      (load custom-file))
+  #+end_src
+* Line numbers
+
+  #+begin_src elisp :tangle early-init.el
+    (global-display-line-numbers-mode t)
+  #+end_src
+
+* Fonts
+
+  #+begin_src elisp :tangle early-init.el
+    (defun my-after-frame (frame)
+      (if (display-graphic-p frame)
+          (progn
+            (add-to-list 'default-frame-alist '(font . "Cascadia Code-11"))
+            (set-face-attribute 'default nil :font "Cascadia Code-11" :height 100)
+            (set-frame-font "Cascadia Code-11" (frame-list)))))
+
+    (mapc 'my-after-frame (frame-list))
+    (add-hook 'after-make-frame-functions 'my-after-frame)
+  #+end_src
+
+* Hooks
+** Org mode
+
+   #+begin_src elisp
+     (add-hook 'org-mode-hook (lambda ()
+                                (display-line-numbers-mode -1)
+                                (toggle-truncate-lines)
+                                (toggle-word-wrap)))
+   #+end_src
+
+* Package Management
+** Setup MELPA repository
+
+   #+begin_src elisp
+     (require 'package)
+
+     (setq package-enable-at-startup nil) ; disable the packages initialization
+
+     (add-to-list 'package-archives
+                  '("melpa" . "https://melpa.org/packages/") t)
+
+     (package-initialize) ; initalize the packages again
+   #+end_src
+
+** Installing =use-package=
+
+   #+begin_src elisp
+     (unless (package-installed-p 'use-package)
+       (package-refresh-contents)
+       (package-install 'use-package))
+   #+end_src
+
+* Emacs can be beautiful and easy
+** Theme
+  
+  #+begin_src elisp
+    (use-package gruvbox-theme
+      :ensure t ; this will ensure that the package will be installed
+      :config
+      (load-theme 'gruvbox-dark-medium t)) ; load the theme
+  #+end_src
+
+** Emojify
+   
+   #+begin_src elisp
+    (use-package emojify
+      :ensure t
+      :hook (after-init . global-emojify-mode))
+   #+end_src
+  
+** Which key?
+
+   #+begin_src elisp
+     (use-package which-key
+       :ensure t
+       :config
+       (which-key-mode))
+   #+end_src
+
+   [[./.images/which-key.jpg]]
+
+** Dashboard
+
+   #+begin_src elisp
+     (use-package dashboard
+       :ensure t
+       :init
+       (progn
+         (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*"))) ; fix for emascclient
+         (setq dashboard-startup-banner "~/.emacs.d/girl.png")
+         (setq dashboard-banner-logo-title "Stop watching hentai"))
+       :config
+       (dashboard-setup-startup-hook))
+   #+end_src
+
+   #+begin_src elisp
+     (setq dashboard-set-heading-icons t)
+     (setq dashboard-set-file-icons t)
+   #+end_src
+
+** Doom Modeline
+
+   #+begin_src elisp
+     (use-package doom-modeline
+       :ensure t
+       :config
+       (doom-modeline-mode))
+   #+end_src
+
+** All the icons
+
+   #+begin_src elisp
+     (use-package all-the-icons
+       :ensure t
+       :if (display-graphic-p))
+   #+end_src
+
+** Evil Mode
+
+   #+begin_src elisp
+     (use-package evil
+       :ensure t
+       :init
+       (setq evil-want-keybinding nil)
+       (setq evil-vsplit-window-right t)
+       (setq evil-split-window-below t)
+       (setq display-line-numbers-type 'relative)
+       :config
+       (evil-mode))
+
+     (use-package evil-collection
+       :after evil
+       :ensure t
+       :config
+       (evil-collection-init))
+   #+end_src
+
+* Coding
+** LSP and autocomplete
+
+   #+begin_src elisp
+     (use-package eglot
+       :ensure t
+       :init
+       (add-hook 'eglot-server-initialized-hook #'company-mode))
+
+     ;;(use-package lsp-ui
+     ;;  :ensure t
+     ;;  :commands lsp-ui-mode)
+
+     (use-package company
+       :ensure t)
+
+     (use-package company-box
+       :after company
+       :ensure t)
+   #+end_src
+
+** Tree Sitter
+
+   #+begin_src elisp
+     (use-package tree-sitter
+       :ensure t)
+
+     (use-package tsc
+       :ensure t)
+   #+end_src
+
+** Direnv
+
+   #+begin_src elisp
+     (use-package direnv
+       :ensure t
+       :config
+       (direnv-mode))
+   #+end_src
+
+** Nix
+
+   #+begin_src elisp
+     (use-package nix-mode
+       :ensure t)
+
+     (add-to-list 'eglot-server-programs '(nix-mode . ("rnix-lsp")))
+
+     (add-hook 'nix-mode-hook 'eglot-ensure)
+   #+end_src
+
+** Python
+
+   #+begin_src elisp
+     (add-to-list 'eglot-server-programs
+		  '(python-mode . ("pyright-langserver" "--stdio")))
+
+     (add-hook 'python-mode-hook #'tree-sitter-hl-mode)
+   #+end_src
+
+** Rust
+
+   #+begin_src elisp
+     (use-package rustic
+       :ensure t
+       :config
+       (setq rustic-lsp-client 'eglot)
+       (setq rustic-lsp-server 'rust-analyzer))
+   #+end_src
+
+** NodeJS
+
+   #+begin_src elisp
+     (add-to-list 'eglot-server-programs
+		  '((or js-mode ts-mode) . ("typescript-language-server" "--stdio")))
+   #+end_src

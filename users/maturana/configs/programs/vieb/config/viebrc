@@ -1,0 +1,8 @@
+" import
+source favorites
+source redirects
+
+" adblock
+set adblocker=update
+
+" vim: ft=vim

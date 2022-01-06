@@ -1,0 +1,4 @@
+notification.warning=2
+notification.command=calcurse --next | xargs -0 notify-send -t 5000 'Calcurse'
+notification.notifyall=all
+daemon.enable=yes

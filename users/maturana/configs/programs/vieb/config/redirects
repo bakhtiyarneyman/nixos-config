@@ -1,0 +1,5 @@
+set redirects+=^https://(www\.)?youtube\.com/(.*)~https://vid.puffyan.us/$2
+set redirects+=^https://(www\.)?reddit.com/(.*)~https://teddit.net/$2
+set redirects+=^https://(www\.)?twitter.com/(.*)~https://nitter.net/$2
+
+" vim: ft=vim

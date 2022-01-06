@@ -1,0 +1,8 @@
+set suggesttopsites=0
+
+set favoritepages+=https://vid.puffyan.us/
+set favoritepages+=https://mail.protonmail.com/
+set favoritepages+=https://mstdn.social/
+set favoritepages+=https://codeberg.org/
+
+" vim: ft=vim

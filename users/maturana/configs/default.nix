@@ -1,0 +1,42 @@
+{
+  imports = [
+    ./programs/fish
+    ./programs/foot.nix
+    ./programs/alacritty.nix
+    ./programs/neovim
+    ./programs/kakoune.nix
+    ./programs/emacs
+    ./programs/vscode
+    ./programs/firefox
+    ./programs/vieb
+    ./programs/qutebrowser
+    ./programs/amfora
+    ./programs/ncmpcpp.nix
+    ./programs/mpv.nix
+    ./programs/zathura.nix
+    ./programs/sway.nix
+    ./programs/exa.nix
+    ./programs/fzf.nix
+    ./programs/git.nix
+    ./programs/waybar
+    ./programs/mako.nix
+    ./programs/direnv.nix
+    ./programs/texlive.nix
+    ./programs/tmux.nix
+    ./programs/gpg.nix
+    ./programs/starship.nix
+    ./programs/newsboat.nix
+    ./programs/calcurse
+    ./programs/eww
+
+    ./services/mpd.nix
+    ./services/emacs.nix
+    ./services/syncthing.nix
+    ./services/gpg-agent.nix
+    ./services/sleep_time.nix
+
+    ./misc/xdg.nix
+    ./misc/gtk.nix
+    ./misc/qt.nix
+  ];
+}

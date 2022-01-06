@@ -1,0 +1,15 @@
+;; imports
+(include "eww_variables.yuck")
+
+;; power menu
+(defwidget power-menu []
+  (box :class "power-menu"
+       :horientation "h"
+       :space-evenly true
+       :halign "center"
+       :spacing 5
+    (button :onclick "systemctl poweroff" "")
+    (button :onclick "systemctl reboot" "ﰇ")
+    (button :onclick "systemctl suspend" "鈴")
+    (button :onclick "systemctl hibernate" "")
+    (button :onclick "swaylock -c '282828'" "")))
