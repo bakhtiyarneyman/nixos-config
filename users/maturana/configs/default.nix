@@ -9,7 +9,6 @@
     ./programs/vscode
     ./programs/firefox
     ./programs/vieb
-    ./programs/qutebrowser
     ./programs/amfora
     ./programs/ncmpcpp.nix
     ./programs/mpv.nix
