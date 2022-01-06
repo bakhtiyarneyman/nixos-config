@@ -73,7 +73,7 @@
       };
     };
 
-    extensions = import ./extensions.nix {
+    extensions = import ./extensions {
       inherit (pkgs) vscode-extensions vscode-utils lib;
     };
   };
