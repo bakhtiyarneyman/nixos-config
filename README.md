@@ -18,7 +18,7 @@ First sorry about my English, I'm learning that language and I've some difficult
 | Shell               | [Fish](https://fishshell.com/)                                                                                |
 | Terminal Emulator   | [Foot](https://codeberg.org/dnkl/foot)                                                                        |
 | Font                | [Cascadia Code](https://github.com/microsoft/cascadia-code)                                                   |
-| Window Manager      | [Sway](**https**://swaywm.org/)                                                                                   |
+| Window Manager      | [Sway](https://swaywm.org/)                                                                                   |
 | Status Bar          | [Waybar](https://github.com/Alexays/Waybar)                                                                   |
 | Launcher            | [Bemenu](https://github.com/Cloudef/bemenu)                                                                   |
 | Notification Daemon | [Mako](https://github.com/emersion/mako)                                                                      |
