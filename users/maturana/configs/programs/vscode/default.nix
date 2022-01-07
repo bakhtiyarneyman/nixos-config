@@ -3,7 +3,7 @@
 {
   programs.vscode = {
     enable = true;
-    package = pkgs.vscode-fhs;
+    package = pkgs.vscodium-fhs;
     userSettings = {
       # font configuration
       editor.fontFamily = "'Cascadia Code', 'Noto Color Emoji', 'CaskaydiaCove Nerd Font'";
