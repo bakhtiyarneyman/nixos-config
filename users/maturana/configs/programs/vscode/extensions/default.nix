@@ -3,10 +3,6 @@
 with vscode-extensions; [
   # languages support
   jnoortheen.nix-ide
-  (import ./julialang.language-julia.nix {
-    inherit (vscode-utils) buildVscodeMarketplaceExtension;
-    inherit lib;
-  })
 
   # python and data science stuff
   ms-python.python
@@ -20,8 +16,4 @@ with vscode-extensions; [
 
   # themes
   pkief.material-icon-theme
-  (import ./jdinhlife.gruvbox.nix {
-    inherit (vscode-utils) buildVscodeMarketplaceExtension;
-    inherit lib;
-  })
-]
+] ++ (import ./custom.nix { inherit vscode-utils lib; })
