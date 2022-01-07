@@ -1,6 +1,6 @@
 # nixos-config
 
-Welcome NixOS configuration ft. [home-manager][hm] and [flakes](https://nixos.wiki/wiki/Flakes)! 😄
+Welcome to my personal NixOS configuration ft. [home-manager][hm] and [flakes](https://nixos.wiki/wiki/Flakes)! 😄
 
 First sorry about my English, I'm learning that language and I've some difficulties, feel free to open a PR if you find some typo.
 
