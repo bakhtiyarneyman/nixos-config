@@ -85,4 +85,4 @@
 
   "${mod}+q" = "reload";
   "${mod}+Shift+q" = "exec swaymsg exit";
-};
+}
