@@ -16,6 +16,8 @@
 
       goyo.enable = true;
 
+      telescope.enable = true;
+
       nix.enable = true;
     };
     extraConfigLua = import ./configs/init.nix { inherit pkgs; };
