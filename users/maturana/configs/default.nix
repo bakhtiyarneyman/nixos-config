@@ -13,7 +13,7 @@
     ./programs/ncmpcpp.nix
     ./programs/mpv.nix
     ./programs/zathura.nix
-    ./programs/sway.nix
+    ./programs/sway
     ./programs/exa.nix
     ./programs/fzf.nix
     ./programs/git.nix
