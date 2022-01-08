@@ -28,7 +28,7 @@ First sorry about my English, I'm learning that language and I've some difficult
 
 ## Installation
 
-First, generate the configuration, you need the `hardware-configuration.nix` file, wich have your mount configuration.
+First, generate the configuration, you need the `hardware-configuration.nix` file, which have your mount configuration.
 
 ```
 nixos-generate-config --root /mnt
