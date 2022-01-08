@@ -1,5 +1,0 @@
-;; reminder
-(defpoll remind :interval "5s" "rem | tail -n +2")
-
-;; home-manager packages
-(defpoll hm-pkgs :interval "30m" "home-manager packages | wc -l")
