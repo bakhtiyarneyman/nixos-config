@@ -9,6 +9,8 @@
       rm = "rm -i";
       mkdir = "mkdir -p";
 
+      cat = "bat";
+
       parrot = "curl parrot.live";
     };
     shellAbbrs = {

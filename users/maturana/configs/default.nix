@@ -26,6 +26,7 @@
     ./programs/starship.nix
     ./programs/newsboat.nix
     ./programs/calcurse
+    ./programs/bat.nix
 
     ./services/mpd.nix
     ./services/emacs.nix
