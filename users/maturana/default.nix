@@ -13,7 +13,7 @@
       # environment variables
       BROWSER = "${config.programs.firefox.package}/bin/firefox";
       EDITOR = "${config.programs.nixvim.package}/bin/nvim";
-      REMINDERS_PATH = "${config.home.homeDirectory}/.reminders";
+      REMINDERS = "${config.home.homeDirectory}/.reminders";
 
       # wayland
       XDG_SESSION_TYPE = "wayland";

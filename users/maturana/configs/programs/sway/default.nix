@@ -86,7 +86,7 @@ in
         resume 'swaymsg "output * dpms on"' \
         before-sleep 'swaylock -f -c 000000' 
       exec wlsunset -s 18:00 -S 06:00
-      exec remind -z -k"notify-send -t 5000 'Remind' %s; play -q $REMINDERS_PATH/song/notification_song.mp3" $REMINDERS_PATH
+      exec remind -z -k"notify-send -t 5000 'Remind' %s; play -q $REMINDERS/song/notification_song.mp3" $REMINDERS
     '';
     extraSessionCommands = ''
       export SDL_VIDEODRIVER=wayland
