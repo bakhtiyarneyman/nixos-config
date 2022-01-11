@@ -34,9 +34,10 @@ in
     spacing = 8;
   };
   "custom/pkgs" = {
-    format = " {}";
-    exec = "nix-store -q -R /run/current-system/sw | wc -l";
-    tooltip = false;
+    format = "{}";
+    exec = "${scripts}/pkgs.sh";
+    return-type = "json";
+    tooltip = true;
   };
   "custom/bluetooth" = {
     format = "{}";
