@@ -51,7 +51,6 @@ with pkgs; [
   jq
   libnotify
   sox
-  nodejs
 
   # wayland
   swayidle

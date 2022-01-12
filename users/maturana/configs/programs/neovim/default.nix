@@ -19,10 +19,21 @@
       telescope.enable = true;
 
       nix.enable = true;
+
+      lsp = {
+        enable = true;
+        servers.pyright.enable = true;
+        servers.rnix-lsp.enable = true;
+      };
     };
     extraConfigLua = import ./configs/init.nix { inherit pkgs; };
     extraPlugins = import ./extra-plugins.nix {
       inherit (pkgs) vimPlugins;
     };
+    extraPackages = with pkgs; [
+      rnix-lsp
+      nodejs
+      nodePackages.pyright
+    ];
   };
 }
