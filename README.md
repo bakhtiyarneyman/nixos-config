@@ -21,7 +21,7 @@ First sorry about my English, I'm learning that language and I've some difficult
 | Window Manager      | [Sway](https://swaywm.org/)                                                                                   |
 | Status Bar          | [Waybar](https://github.com/Alexays/Waybar)                                                                   |
 | Launcher            | [Bemenu](https://github.com/Cloudef/bemenu)                                                                   |
-| Notification Daemon | [Mako](https://github.com/emersion/mako)                                                                      |
+| Notification Daemon | [Fnott](https://codeberg.org/dnkl/fnott)                                                                      |
 | GTK Theme           | [Gruvbox Dark](https://github.com/jmattheis/gruvbox-dark-gtk)                                                 |
 | Browser             | [Firefox](https://github.com/emersion/mako), [Amfora](https://github.com/makeworld-the-better-one/amfora)     |
 | Text Editor         | [Neovim](https://neovim.io/), [Emacs](https://www.gnu.org/software/emacs/), [VSCodium](https://vscodium.com/) |

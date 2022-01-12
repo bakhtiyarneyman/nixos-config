@@ -79,14 +79,14 @@ in
     };
     extraConfig = ''
       exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-      exec mako
-      exec swayidle -w \
-        timeout 300 'swaylock -f -c 000000' \
+      exec ${pkgs.fnott}/bin/fnott
+      exec ${pkgs.swayidle}/bin/swayidle -w \
+        timeout 300 '${pkgs.swaylock}/bin/swaylock -f -c 000000' \
         timeout 600 'swaymsg "output * dpms off"' \
         resume 'swaymsg "output * dpms on"' \
-        before-sleep 'swaylock -f -c 000000' 
-      exec wlsunset -s 18:00 -S 06:00
-      exec remind -z -k"notify-send -t 5000 'Remind' %s; play -q $REMINDERS/song/notification_song.mp3" $REMINDERS
+        before-sleep '${pkgs.swaylock}/bin/swaylock -f -c 000000' 
+      exec ${pkgs.wlsunset}/bin/wlsunset -s 18:00 -S 06:00
+      exec ${pkgs.remind}/bin/remind -z -k"${pkgs.libnotify}/bin/notify-send -t 5000 'To-Do' %s" $REMINDERS
     '';
     extraSessionCommands = ''
       export SDL_VIDEODRIVER=wayland

@@ -1,3 +1,7 @@
+# LICENSE
+
+## All content, except the `users/maturana/config/services/fnott/song.mp3` file
+
 This is free and unencumbered software released into the public domain.
 
 Anyone is free to copy, modify, publish, use, compile, sell, or

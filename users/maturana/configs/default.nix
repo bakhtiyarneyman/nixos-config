@@ -18,7 +18,6 @@
     ./programs/fzf.nix
     ./programs/git.nix
     ./programs/waybar
-    ./programs/mako.nix
     ./programs/direnv.nix
     ./programs/texlive.nix
     ./programs/tmux.nix
@@ -33,6 +32,7 @@
     ./services/syncthing.nix
     ./services/gpg-agent.nix
     ./services/sleep_time.nix
+    ./services/fnott
 
     ./misc/xdg.nix
     ./misc/gtk.nix
