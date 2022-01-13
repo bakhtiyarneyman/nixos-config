@@ -1,8 +1,4 @@
-{ pkgs
-, config
-, lib
-, ...
-}:
+{ pkgs, config, lib, ... }:
 
 with lib;
 
@@ -16,11 +12,15 @@ in {
       package = mkOption {
         type = types.package;
         default = pkgs.seatd;
+        example = literalExample "pkgs.seatd";
+        description = "The seatd package to be installed";
       };
 
       group = mkOption {
         type = types.str;
         default = "seatd";
+        example = literalExample "seat";
+        description = "The group name that will have access to seatd";
       };
     };
   };

@@ -1,5 +1,5 @@
 {
   imports = [
-    ./seatd
+    ./seatd.nix
   ];
 }
