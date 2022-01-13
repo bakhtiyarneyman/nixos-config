@@ -3,10 +3,10 @@
 with lib;
 
 let
-  cfg = config.mine.services.seatd;
+  cfg = config.services.seatd;
 in {
   options = {
-    mine.services.seatd = {
+    services.seatd = {
       enable = mkEnableOption "seatd";
 
       package = mkOption {
