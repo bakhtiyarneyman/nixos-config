@@ -7,7 +7,7 @@ let
     summary-font = "${gtk.font.name}:size=12:weight=bold";
     title-font = "${gtk.font.name}:size=8:weight=bold:slant=italic";
     body-font = "${gtk.font.name}:size=10:weight=regular";
-    sound-file = ./notification_song.mp3;
+    sound-file = builtins.toString ./song.mp3;
   };
 in
 {
