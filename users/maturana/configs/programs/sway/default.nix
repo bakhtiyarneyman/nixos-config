@@ -39,10 +39,10 @@ in
         outer = 6;
       };
       window = {
-        border = 3;
+        border = 2;
       };
       floating = {
-        border = 3;
+        border = 2;
         criteria = [
           { app_id = "org.keepassxc.KeePassXC"; }
           {
@@ -86,7 +86,7 @@ in
         resume 'swaymsg "output * dpms on"' \
         before-sleep '${pkgs.swaylock}/bin/swaylock -f -c 000000' 
       exec ${pkgs.wlsunset}/bin/wlsunset -s 18:00 -S 06:00
-      exec ${pkgs.remind}/bin/remind -z -k"${pkgs.libnotify}/bin/notify-send -t 5000 'To-Do' %s" $REMINDERS
+      exec ${pkgs.remind}/bin/remind -z -k"${pkgs.libnotify}/bin/notify-send -t 5000 -a 'Remind' 'To-Do' %s" $REMINDERS
     '';
     extraSessionCommands = ''
       export SDL_VIDEODRIVER=wayland
