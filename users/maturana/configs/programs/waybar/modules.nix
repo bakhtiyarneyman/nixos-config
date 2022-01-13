@@ -4,31 +4,19 @@ let
   scripts = ./scripts;
 in
 {
-  "sway/workspaces" = {
-    format = "{name}";
-    disable-scroll = true;
-    all-outputs = true;
-  };
-  "sway/mode" = {
-    format = "{}";
-    on-click = "swaymsg 'mode default'";
-  };
-  "custom/scratchpad_indicator" = {
-    interval = 3;
-    exec = "swaymsg -t get_tree | jq 'recurse(.nodes[]) | first(select(.name==\"__i3_scratch\")) | .floating_nodes | length | select(. >= 1)'";
-    format = " {}";
-    on-click = "swaymsg 'scratchpad show'";
-    on-click-right = "swaymsg 'move scratchpad'";
-  };
-  "sway/window" = {
-    format = "{}";
-    max-length = 40;
-    rewrite = {
-      "(.*) - Mozilla Firefox" = " $1";
-      "nvim (.*) /.*" = " $1";
-      #"imv (.*) /.*" = " $1";
-      "(.*) - VSCodium" = " $1";
-    };
+  "river/tags" = {
+    num-tags = true;
+    tag-labels = [
+      ""
+      ""
+      ""
+      ""
+      ""
+      ""
+      ""
+      ""
+      ""
+    ];
   };
   "tray" = {
     spacing = 8;
@@ -77,7 +65,6 @@ in
     format = "{icon}";
     format-alt = "{icon} {capacity}%";
     format-alt-plugged = "{icon} {capacity}%";
-    #format-icons = [ "" "" "" "" "" ];
     format-icons = {
       default = [ "" "" "" "" "" "" "" "" "" "" "" ];
       plugged = [ "" "" "" "" "" "" "" ];
@@ -88,10 +75,6 @@ in
       critical = 15;
     };
     max-length = 25;
-  };
-  "sway/language" = {
-    format = "{short}({variant})";
-    on-click = "swaymsg input '1:1:AT_Translated_Set_2_keyboard' xkb_switch_layout next";
   };
   "clock" = {
     format = "{:%H:%M}";

@@ -1,0 +1,5 @@
+{
+  imports = [
+    ./windowManager/river.nix
+  ];
+}
