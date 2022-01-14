@@ -11,9 +11,9 @@
       #modules-center = [ "sway/window" ];
       modules-right = [
         "tray"
-        "custom/pkgs"
         "network"
         "pulseaudio"
+        "custom/bluetooth"
         "backlight"
         "battery"
         "sway/language"

@@ -41,8 +41,10 @@ in
   };
   "custom/bluetooth" = {
     format = "{}";
+    format-alt = "{alt}";
     exec = "${scripts}/bluetooth.sh --show";
-    on-click = "${scripts}/bluetooth.sh --toggle";
+    on-click-right = "${scripts}/bluetooth.sh --toggle";
+    return-type = "json";
     exec-if = "pgrep bluetoothd";
     inteval = 5;
   };
