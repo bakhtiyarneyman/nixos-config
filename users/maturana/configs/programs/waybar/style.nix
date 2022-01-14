@@ -26,19 +26,13 @@ with colorscheme.colors; ''
     color: #${base06};
   }
 
-  #workspaces button:not(:first-child),
-  #workspaces button:not(:last-child) {
-    margin-left: 0.2rem;
-    margin-right: 0.2rem;
-  }
-
   #workspaces button:hover {
     background: #${base02};
-    box-shadow: inset 0 -3px #${base05};
+    box-shadow: inset 0 -3px #${base0B};
   }
 
   #workspaces button.focused {
-    box-shadow: inset 0 -3px #${base05};
+    box-shadow: inset 0 -3px #${base0B};
   }
 
   #workspaces button.urgent {
