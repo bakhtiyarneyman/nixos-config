@@ -21,13 +21,13 @@ with config.colorscheme.colors; ''
 
   /* tags */
   #tags button {
-    margin: 0 0.5rem;
+    margin: 0 0.2rem;
     background: transparent;
-    color: #${base02};
+    color: #${base01};
   }
 
   #tags button.occupied {
-    color: #${base04}
+    color: #${base05}
   }
 
   #tags button.focused {
