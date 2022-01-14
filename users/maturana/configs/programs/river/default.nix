@@ -29,6 +29,9 @@ in
       # start brave
       riverctl map normal ${mod} F1 spawn ${pkgs.brave}/bin/brave
 
+      # toggle waybar
+      riverctl map normal ${mod} B spawn "pkill -USR1 waybar"
+
       # close the focused view
       riverctl map normal ${mod}+Shift C close
 
