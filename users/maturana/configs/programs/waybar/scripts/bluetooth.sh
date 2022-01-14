@@ -1,20 +1,41 @@
 #!/usr/bin/env bash
 
-powered=$(bluetoothctl show | grep "Powered" | cut -d' ' -f2)
+function is_powered() {
+  if [ -n "$(bluetoothctl show | grep 'Powered: no')" ]; then
+    false
+  else
+    true
+  fi
+}
+
+function status() {
+  if $(is_powered); then
+    echo "On"
+  else
+    echo "Off"
+  fi
+}
+
+function icon() {
+  if $(is_powered); then
+    echo ""
+  else
+    echo ""
+  fi
+}
 
 case $1 in
   --show)
-    if [ $powered = no ]; then
-        echo 'Off'
-    else
-        echo 'On'
-    fi
+    text="$(icon)"
+    alt="$(icon) $(status)"
+
+    echo "{\"text\": \"$text\",\"alt\": \"$alt\"}"
     ;;
   --toggle)
-    if [ $powered = no ]; then
-      bluetoothctl power on
-    else
+    if $(is_powered); then
       bluetoothctl power off
+    else
+      bluetoothctl power on
     fi
     ;;
 esac

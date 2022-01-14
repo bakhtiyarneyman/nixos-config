@@ -29,10 +29,11 @@ in
   };
   "custom/bluetooth" = {
     format = "{}";
+    format-alt = "{alt}";
     exec = "${scripts}/bluetooth.sh --show";
-    on-click = "${scripts}/bluetooth.sh --toggle";
-    exec-if = "pgrep bluetoothd";
-    inteval = 5;
+    on-click-right = "${scripts}/bluetooth.sh --toggle";
+    return-type = "json";
+    interval = 5;
   };
   "network" = {
     interface = "wlp3s0";
