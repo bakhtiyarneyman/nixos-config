@@ -36,7 +36,7 @@
         }
         {
           name = "WinSetOption";
-          option = "filetype=(haskell|rust)";
+          option = "filetype=(haskell|rust|zig)";
           commands = ''
             lsp-enable-window
           '';
@@ -75,5 +75,10 @@
     roots = ["Pipfile"]
     command = "pyright-langserver"
     args = ["--stdio"]
+
+    [language.zig]
+    filetypes = ["zig"]
+   	roots = ["build.zig"]
+   	command = "zls"
   '';
 }

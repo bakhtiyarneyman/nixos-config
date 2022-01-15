@@ -19,6 +19,7 @@
       telescope.enable = true;
 
       nix.enable = true;
+      zig.enable = true;
 
       lsp = {
         enable = true;

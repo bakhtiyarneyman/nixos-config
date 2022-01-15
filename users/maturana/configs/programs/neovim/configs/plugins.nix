@@ -1,14 +1,15 @@
 { lib, ... }:
 
-let
-  logo = builtins.readFile ./logos/little_sus.txt;
-in with lib; ''
+with lib;
+
+''
   -- dashboard {{{
     do
       local g = vim.g
 
       g.dashboard_custom_header = {${
-        concatMapStrings (line: "'${line}',") (splitString "\n" logo)
+        concatMapStrings (line: "'${line}',")
+          (splitString "\n" (builtins.readFile ./logos/anime_girl.txt))
       }}
 
       g.dashboard_custom_footer = {
