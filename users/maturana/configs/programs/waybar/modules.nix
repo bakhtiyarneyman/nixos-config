@@ -37,10 +37,9 @@ in
   };
   "network" = {
     interface = "wlp3s0";
-    format = "{ifname}";
-    format-wifi = " {essid} ({signalStrength}%)";
-    format-ethernet = " {ipaddr}/{cidr}";
-    format-disconnected = "Disconnected";
+    format = "直";
+    format-alt = "直  {essid} ({signalStrength}%)";
+    format-disconnected = "睊";
     max-length = 40;
   };
   "pulseaudio" = {

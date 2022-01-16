@@ -19,8 +19,8 @@
       modules-center = [ "river/tags" ];
       modules-right = [
         "tray"
-        "network"
         "pulseaudio"
+        "network"
         "custom/bluetooth"
         "battery"
         "clock"
