@@ -41,8 +41,7 @@ in
         criteria = [
           { app_id = "org.keepassxc.KeePassXC"; }
           {
-            class = "firefox";
-            title = "Picture-in-Picture";
+            title = "Firefox - Sharing Indicator";
           }
         ];
       };
