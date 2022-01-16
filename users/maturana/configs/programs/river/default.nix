@@ -163,7 +163,8 @@ in
 
       # Make certain views start floating
       riverctl float-filter-add app-id float
-      riverctl float-filter-add title "popup title with spaces"
+      riverctl float-filter-add title "Firefox - Sharing Indicator"
+      riverctl float-filter-add app-id "io.keepassxc.KeePassXC"
 
       # Set app-ids and titles of views which should use client side decorations
       riverctl csd-filter-add app-id "gedit"
