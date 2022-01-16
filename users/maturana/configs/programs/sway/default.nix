@@ -29,11 +29,6 @@ in
       output = {
         "eDP-1" = { bg = "${wallpaper} fill"; };
       };
-      seat = {
-        "1267:91:Elan_Touchpad" = {
-          hide_cursor = "when-typing enable";
-        };
-      };
       gaps = {
         inner = 6;
         outer = 6;
