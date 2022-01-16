@@ -4,9 +4,9 @@ with config;
 
 let
   defaults = {
-    summary-font = "${gtk.font.name}:size=12:weight=bold";
-    title-font = "${gtk.font.name}:size=8:weight=bold:slant=italic";
-    body-font = "${gtk.font.name}:size=10:weight=regular";
+    summary-font = "${gtk.font.name}:size=10:weight=bold";
+    title-font = "${gtk.font.name}:size=6:weight=bold:slant=italic";
+    body-font = "${gtk.font.name}:size=8:weight=regular";
     sound-file = builtins.toString ./song.mp3;
   };
 in
