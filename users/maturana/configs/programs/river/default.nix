@@ -142,6 +142,10 @@ in
           riverctl map $mode None XF86AudioLowerVolume  spawn '${pkgs.pamixer}/bin/pamixer -d 5'
           riverctl map $mode None XF86AudioMute         spawn '${pkgs.pamixer}/bin/pamixer --toggle-mute'
 
+          # print screen
+          riverctl map $mode None Print spawn '${pkgs.grim}/bin/grim ${config.xdg.userDirs.pictures}/$(date +%m-%d-%Y_%H-%M-%S).jpg'
+          riverctl map $mode Shift Print spawn '${pkgs.grim}/bin/grim -g "$(${pkgs.slurp}/bin/slurp)" ${config.xdg.userDirs.pictures}/$(date +%m-%d-%Y_%H-%M-%S).jpg'
+
           # Control MPRIS aware media players with playerctl (https://github.com/altdesktop/playerctl)
           riverctl map $mode None XF86AudioMedia spawn '${pkgs.mpc_cli}/bin/mpc toggle'
           riverctl map $mode None XF86AudioPlay  spawn '${pkgs.mpc_cli}/bin/mpc toggle'
