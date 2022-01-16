@@ -45,6 +45,7 @@ with config.colorscheme.colors; ''
   #pulseaudio,
   #backlight,
   #battery,
+  #mpd,
   #clock {
     background: #${base04};
     padding: 2px 10px;

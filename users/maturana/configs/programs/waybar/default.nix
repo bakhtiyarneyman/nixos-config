@@ -15,15 +15,15 @@
       output = "eDP-1";
       layer = "bottom";
       position = "top";
-      modules-left = [ "clock" ];
+      modules-left = [ "mpd" ];
       modules-center = [ "river/tags" ];
       modules-right = [
         "tray"
         "network"
         "pulseaudio"
         "custom/bluetooth"
-        "backlight"
         "battery"
+        "clock"
       ];
       modules = import ./modules.nix { inherit pkgs; };
     }];

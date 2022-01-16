@@ -82,4 +82,18 @@ in
     format-alt = "{:%a, %d %b %Y}";
     tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
   };
+  "mpd" = {
+    format = "{stateIcon} {artist} - {title}";
+    format-disconnected = "ﱙ";
+    format-stopped = "";
+    state-icons = {
+      paused = "";
+      playing = "";
+    };
+    interval = 1;
+    on-click = "${pkgs.mpc_cli}/bin/mpc toggle";
+    on-click-right = "${pkgs.mpc_cli}/bin/mpc stop";
+    on-scroll-up = "${pkgs.mpc_cli}/bin/mpc volume +1";
+    on-scroll-down = "${pkgs.mpc_cli}/bin/mpc volume -1";
+  };
 }
