@@ -26,6 +26,7 @@
         enable = true;
         servers.pyright.enable = true;
         servers.rnix-lsp.enable = true;
+        servers.rust-analyzer.enable = true;
       };
     };
     extraConfigLua = import ./configs/init.nix { inherit pkgs; };
