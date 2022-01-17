@@ -79,7 +79,7 @@ in
   "clock" = {
     format = "{:%H:%M}";
     format-alt = "{:%a, %d %b %Y}";
-    tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
+    tooltip-format = "<big>{:%Y %B}</big>\n<small>{calendar}</small>";
   };
   "mpd" = {
     format = "{stateIcon} {artist} - {title}";
