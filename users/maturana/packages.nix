@@ -28,9 +28,6 @@ with pkgs; [
   bitwarden
   keepassxc
 
-  # development
-  zls
-
   # useful nix stuff
   nixpkgs-fmt
   nix-prefetch-git
