@@ -38,7 +38,7 @@ Now you can clone the repository, copy the `hardware-configuration.nix` file and
 
 ```
 nix-shell -p nixUnstable git
-git clone https://codeberg.org/maturana/nixos-config.git /mnt/flake
+git clone https://codeberg.org/imMaturana/nixos-config.git /mnt/flake
 
 # copy the hardware configuration
 cp /mnt/etc/nixos/hardware-configuration.nix /mnt/flake/hosts/beepboop/
