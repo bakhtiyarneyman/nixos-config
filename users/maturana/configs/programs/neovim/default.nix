@@ -13,6 +13,15 @@
     plugins = {
       bufferline.enable = true;
       lualine.enable = true;
+      nvim-tree = {
+        enable = true;
+        view = {
+          side = "left";
+          autoResize = true;
+        };
+        updateCwd = true;
+        diagnostics.enable = true;
+      };
 
       goyo.enable = true;
 
@@ -20,6 +29,11 @@
 
       nix.enable = true;
       zig.enable = true;
+      treesitter = {
+        enable = true;
+        indent = true;
+        ensureInstalled = "all";
+      };
 
       lsp = {
         enable = true;
