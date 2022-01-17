@@ -13,12 +13,14 @@
     plugins = {
       bufferline.enable = true;
       lualine.enable = true;
+      nvim-tree.enable = true;
 
       goyo.enable = true;
 
       telescope.enable = true;
 
       nix.enable = true;
+      treesitter.enable = true;
 
       lsp = {
         enable = true;
