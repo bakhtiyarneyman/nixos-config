@@ -7,6 +7,7 @@ with pkgs; [
 
   # text editors
   micro
+  helix
 
   # documents
   #libreoffice-fresh
