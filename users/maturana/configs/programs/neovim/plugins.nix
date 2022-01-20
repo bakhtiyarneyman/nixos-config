@@ -4,6 +4,7 @@
   goyo.enable = true;
   nvim-tree.enable = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
   telescope = {
     enable = true;
   };
@@ -14,6 +15,11 @@
   nix.enable = true;
   zig.enable = true;
 =======
+=======
+  telescope = {
+    enable = true;
+  };
+>>>>>>> 4b64f76 (nixvim: add telescope plugin)
   dashboard = {
     enable = true;
     header = [
