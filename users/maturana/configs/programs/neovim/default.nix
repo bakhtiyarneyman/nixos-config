@@ -4,37 +4,21 @@
   programs.nixvim = {
     enable = true;
     package = pkgs.neovim-nightly;
+    colorschemes.gruvbox.enable = true;
     options = {
       number = true;
       relativenumber = true;
       shiftwidth = 2;
     };
-    colorschemes.gruvbox.enable = true;
-    plugins = {
-      bufferline.enable = true;
-      lualine.enable = true;
-      nvim-tree.enable = true;
-
-      goyo.enable = true;
-
-      telescope.enable = true;
-
-      nix.enable = true;
-      treesitter.enable = true;
-
-      lsp = {
-        enable = true;
-        servers.pyright.enable = true;
-        servers.rnix-lsp.enable = true;
-        servers.rust-analyzer.enable = true;
-      };
+    globals = {
+      mapleader = " ";
     };
-    extraConfigLua = import ./configs/init.nix { inherit pkgs; };
+    maps = import ./maps.nix;
+    plugins = import ./plugins.nix;
     extraPlugins = import ./extra-plugins.nix {
       inherit (pkgs) vimPlugins;
     };
     extraPackages = with pkgs; [
-      rnix-lsp
       nodejs
       nodePackages.pyright
     ];
