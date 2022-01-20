@@ -3,6 +3,9 @@
   lualine.enable = true;
   goyo.enable = true;
   nvim-tree.enable = true;
+  telescope = {
+    enable = true;
+  };
   dashboard = {
     enable = true;
     header = [
