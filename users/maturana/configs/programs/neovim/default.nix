@@ -4,11 +4,13 @@
   programs.nixvim = {
     enable = true;
     package = pkgs.neovim-nightly;
+    colorschemes.gruvbox.enable = true;
     options = {
       number = true;
       relativenumber = true;
       shiftwidth = 2;
     };
+<<<<<<< HEAD
     colorschemes.gruvbox.enable = true;
     plugins = {
       bufferline.enable = true;
@@ -41,13 +43,17 @@
         servers.rnix-lsp.enable = true;
         servers.zls.enable = true;
       };
+=======
+    globals = {
+      mapleader = " ";
+>>>>>>> 9f654c7 (flake: use my nixvim fork)
     };
-    extraConfigLua = import ./configs/init.nix { inherit pkgs; };
+    maps = import ./maps.nix;
+    plugins = import ./plugins.nix;
     extraPlugins = import ./extra-plugins.nix {
       inherit (pkgs) vimPlugins;
     };
     extraPackages = with pkgs; [
-      rnix-lsp
       nodejs
       nodePackages.pyright
     ];

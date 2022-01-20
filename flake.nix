@@ -8,7 +8,7 @@
     nixpkgs-wayland.url = "github:nix-community/nixpkgs-wayland";
     nur.url = "github:nix-community/NUR";
     nix-colors.url = "github:Misterio77/nix-colors";
-    nixvim.url = "github:pta2002/nixvim";
+    nixvim.url = "github:imMaturana/nixvim";
     neovim.url = "github:nix-community/neovim-nightly-overlay";
 
     # branches

@@ -261,15 +261,23 @@
         "nmdSrc": "nmdSrc"
       },
       "locked": {
+<<<<<<< HEAD
         "lastModified": 1642446128,
         "narHash": "sha256-SGH9L8/9MjCxrqywsdgmWwAZH0zIKzT8jCh3VujUDZA=",
         "owner": "pta2002",
         "repo": "nixvim",
         "rev": "9d1911a5d5b754eaae95da2560d25a2d2f9f3f89",
+=======
+        "lastModified": 1642589117,
+        "narHash": "sha256-ctVMU7Vv4q9aNvomj6GoC9j9QcjXVGJsu+RCD4msZdk=",
+        "owner": "imMaturana",
+        "repo": "nixvim",
+        "rev": "d8df00cab07dbe53505bf9cc33d49351e7c4ac7f",
+>>>>>>> 9f654c7 (flake: use my nixvim fork)
         "type": "github"
       },
       "original": {
-        "owner": "pta2002",
+        "owner": "imMaturana",
         "repo": "nixvim",
         "type": "github"
       }

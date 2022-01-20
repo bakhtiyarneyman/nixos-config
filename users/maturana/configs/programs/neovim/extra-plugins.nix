@@ -2,8 +2,6 @@
 
 with vimPlugins; [
   julia-vim
-  dashboard-nvim
-  emmet-vim
 
   # cmp
   nvim-cmp
@@ -13,8 +11,4 @@ with vimPlugins; [
   cmp-cmdline
   cmp_luasnip
   luasnip
-
-  coc-nvim
-  coc-emmet
-  coc-tsserver
 ]
