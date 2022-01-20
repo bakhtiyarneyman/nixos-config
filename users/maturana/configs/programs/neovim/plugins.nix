@@ -33,4 +33,5 @@
     servers.rnix-lsp.enable = true;
     servers.rust-analyzer.enable = true;
   };
+  neogit.enable = true;
 }
