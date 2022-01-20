@@ -49,7 +49,11 @@
     servers.rust-analyzer.enable = true;
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
   neogit.enable = true;
 =======
 >>>>>>> 9f654c7 (flake: use my nixvim fork)
+=======
+  neogit.enable = true;
+>>>>>>> 1591aea (nixvim: add neogit plugin)
 }
