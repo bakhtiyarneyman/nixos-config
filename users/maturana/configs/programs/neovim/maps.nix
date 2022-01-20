@@ -1,7 +1,7 @@
 {
   normal = {
     "<C-b>" = {
-      command = ":NvimTreeToggle";
+      action = ":NvimTreeToggle<CR>";
       noremap = true;
       silent = true;
     };
