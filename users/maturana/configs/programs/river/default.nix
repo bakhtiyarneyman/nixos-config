@@ -27,7 +27,7 @@ in
         --hb '#${config.colorscheme.colors.base04}' --hf '#${config.colorscheme.colors.base01}'"
 
       # start brave
-      riverctl map normal ${mod} F1 spawn ${pkgs.brave}/bin/brave
+      riverctl map normal ${mod} F1 spawn ${pkgs.firefox}/bin/firefox
 
       # toggle waybar
       riverctl map normal ${mod} B spawn "pkill -USR1 waybar"
