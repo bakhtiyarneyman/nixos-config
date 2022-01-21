@@ -58,14 +58,6 @@ in
       # Mod+Return to bump the focused view to the top of the layout stack
       riverctl map normal ${mod} Return zoom
 
-      # Mod+H and Mod+L to decrease/increase the main ratio of rivertile(1)
-      riverctl map normal ${mod} H send-layout-cmd rivertile "main-ratio -0.05"
-      riverctl map normal ${mod} L send-layout-cmd rivertile "main-ratio +0.05"
-
-      # Mod+Shift+H and Mod+Shift+L to increment/decrement the main count of rivertile(1)
-      riverctl map normal ${mod}+Shift H send-layout-cmd rivertile "main-count +1"
-      riverctl map normal ${mod}+Shift L send-layout-cmd rivertile "main-count -1"
-
       # Mod+Alt+{H,J,K,L} to move views
       riverctl map normal ${mod}+Mod1 H move left 100
       riverctl map normal ${mod}+Mod1 J move down 100
@@ -176,10 +168,28 @@ in
       # autostart
       ${import ./autostart.nix { inherit pkgs config nix-colors; }}
 
-      # Set and exec into the default layout generator, rivertile.
-      # River will send the process group of the init executable SIGTERM on exit.
-      riverctl default-layout rivertile
-      exec rivertile -view-padding 6 -outer-padding 6
+      # kile
+      riverctl spawn "${pkgs.kile-wl}/bin/kile"
+
+      riverctl map normal ${mod} T send-layout-cmd kile "focused (v: h h)"
+      riverctl map normal ${mod} S send-layout-cmd kile "focused (h: v v)"
+
+      # Mod+H and Mod+L to decrease/increase the main ratio of kile
+      riverctl map normal ${mod} H send-layout-cmd kile "mod_main_ratio -0.05"
+      riverctl map normal ${mod} L send-layout-cmd kile "mod_main_ratio +0.05"
+
+      # Mod+Shift+H and Mod+Shift+L to increment/decrement the main count of kile
+      riverctl map normal ${mod}+Shift H send-layout-cmd kile "mod_main_amount +1"
+      riverctl map normal ${mod}+Shift L send-layout-cmd kile "mod_main_amount -1"
+
+      riverctl default-layout kile
+
+      # layout
+      riverctl send-layout-cmd kile "all (v: h h)"
+
+      # gaps
+      riverctl send-layout-cmd kile "view_padding 6"
+      riverctl send-layout-cmd kile "outer_padding 6"
     '';
   };
 }
