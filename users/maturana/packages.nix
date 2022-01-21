@@ -51,6 +51,7 @@ with pkgs; [
   jq
   libnotify
   sox
+  ripgrep
 
   # wayland
   swayidle
