@@ -12,19 +12,19 @@ First sorry about my English, I'm learning that language and I've some difficult
 
 ![screenshot](.images/screenshot.png)
 
-|                     |                                                                                                               |
-| ------------------- | ------------------------------------------------------------------------------------------------------------- |
-| OS                  | [NixOS](https://nixos.org/)                                                                                   |
-| Shell               | [Fish](https://fishshell.com/)                                                                                |
-| Terminal Emulator   | [Foot](https://codeberg.org/dnkl/foot)                                                                        |
-| Font                | [Cascadia Code](https://github.com/microsoft/cascadia-code)                                                   |
-| Window Manager      | [River](https://github.com/riverwm/river) + [kile](https://gitlab.com/snakedye/kile)                          |
-| Status Bar          | [Waybar](https://github.com/Alexays/Waybar)                                                                   |
-| Launcher            | [Bemenu](https://github.com/Cloudef/bemenu)                                                                   |
-| Notification Daemon | [Fnott](https://codeberg.org/dnkl/fnott)                                                                      |
-| GTK Theme           | [Gruvbox Dark](https://github.com/jmattheis/gruvbox-dark-gtk)                                                 |
-| Browser             | [Firefox](https://github.com/emersion/mako), [Amfora](https://github.com/makeworld-the-better-one/amfora)     |
-| Text Editor         | [Neovim](https://neovim.io/), [Emacs](https://www.gnu.org/software/emacs/), [VSCodium](https://vscodium.com/) |
+|                     |                                                                                                                      |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| OS                  | [NixOS](https://nixos.org/)                                                                                          |
+| Shell               | [Fish](https://fishshell.com/)                                                                                       |
+| Terminal Emulator   | [Foot](https://codeberg.org/dnkl/foot)                                                                               |
+| Font                | [Cascadia Code](https://github.com/microsoft/cascadia-code)                                                          |
+| Window Manager      | [River](https://github.com/riverwm/river) + [kile](https://gitlab.com/snakedye/kile)                                 |
+| Status Bar          | [Waybar](https://github.com/Alexays/Waybar)                                                                          |
+| Launcher            | [Bemenu](https://github.com/Cloudef/bemenu)                                                                          |
+| Notification Daemon | [Fnott](https://codeberg.org/dnkl/fnott)                                                                             |
+| GTK Theme           | [Gruvbox Dark](https://github.com/jmattheis/gruvbox-dark-gtk)                                                        |
+| Browser             | [Firefox](https://github.com/emersion/mako), [Amfora](https://github.com/makeworld-the-better-one/amfora)            |
+| Text Editor         | [Neovim](https://neovim.io/), [Emacs](https://www.gnu.org/software/emacs/), [VSCode](https://code.visualstudio.com/) |
 
 ## Installation
 
