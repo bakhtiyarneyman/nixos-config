@@ -1,21 +1,35 @@
 #!/usr/bin/env bash
 
 function is_powered() {
-  if bluetoothctl show | grep -q "Powered: yes"; then
-    true
-  else
+  if [ -n "$(bluetoothctl show | grep 'Powered: no')" ]; then
     false
+  else
+    true
   fi
 }
 
-icon=$(is_powered && echo "" || echo "")
+function status() {
+  if $(is_powered); then
+    echo "On"
+  else
+    echo "Off"
+  fi
+}
+
+function icon() {
+  if $(is_powered); then
+    echo ""
+  else
+    echo ""
+  fi
+}
 
 case $1 in
   --show)
-    text="$icon"
-    alt="$(is_powered && echo 'On' || echo 'Off')"
+    text="$(icon)"
+    alt="$(icon) $(status)"
 
-    echo "{\"text\":\"$text\",\"alt\":\"$icon $alt\"}"
+    echo "{\"text\": \"$text\",\"alt\": \"$alt\"}"
     ;;
   --toggle)
     if $(is_powered); then

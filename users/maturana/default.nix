@@ -1,7 +1,7 @@
 { pkgs, config, nix-colors, ... }:
 
 {
-  imports = [ ./configs ];
+  imports = [ ./configs ./modules ];
   
   colorscheme = nix-colors.colorSchemes.gruvbox-dark-medium;
 
@@ -15,9 +15,12 @@
       EDITOR = "${config.programs.nixvim.package}/bin/nvim";
       REMINDERS = "${config.home.homeDirectory}/.reminders";
 
+      XKB_DEFAULT_LAYOUT = "us,us";
+      XKB_DEFAULT_VARIANT = "colemak,intl";
+      XKB_DEFAULT_OPTIONS = "caps:swapescape,grp:alt_shift_toggle";
+
       # wayland
       XDG_SESSION_TYPE = "wayland";
-      XDG_CURRENT_DESKTOP = "sway";
 
       # firefox
       MOZ_ENABLE_WAYLAND = "1";

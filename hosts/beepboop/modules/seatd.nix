@@ -1,26 +1,26 @@
-{ pkgs
-, config
-, lib
-, ...
-}:
+{ pkgs, config, lib, ... }:
 
 with lib;
 
 let
-  cfg = config.mine.services.seatd;
+  cfg = config.services.seatd;
 in {
   options = {
-    mine.services.seatd = {
+    services.seatd = {
       enable = mkEnableOption "seatd";
 
       package = mkOption {
         type = types.package;
         default = pkgs.seatd;
+        example = literalExample "pkgs.seatd";
+        description = "The seatd package to be installed";
       };
 
       group = mkOption {
         type = types.str;
         default = "seatd";
+        example = literalExample "seat";
+        description = "The group name that will have access to seatd";
       };
     };
   };

@@ -71,7 +71,7 @@
     '';
     loginShellInit = ''
       if [ -z $DISPLAY ] && [ (tty) = "/dev/tty1" ]
-        ${lib.optionalString config.wayland.windowManager.sway.enable "exec sway"}
+        ${lib.optionalString config.wayland.windowManager.river.enable "exec river"}
       end
     '';
     functions = {

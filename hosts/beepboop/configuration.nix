@@ -122,7 +122,7 @@
   services.openssh.enable = true;
 
   ## seatd
-  mine.services.seatd.enable = true;
+  services.seatd.enable = true;
 
   ## udev
   services.udev.packages = [

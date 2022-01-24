@@ -1,10 +1,10 @@
-{ colorscheme, ... }:
+{ config, ... }:
 
-with colorscheme.colors; ''
+with config.colorscheme.colors; ''
   * {
     border: none;
     border-radius: 0;
-    font-family: 'Cascadia Code', 'CaskaydiaCove Nerd Font';
+    font-family: '${config.gtk.font.name}', 'CaskaydiaCove Nerd Font';
     font-size: 15px;
     min-height: 0;
   }
@@ -19,29 +19,23 @@ with colorscheme.colors; ''
     opacity: 0.2;
   }
 
-  /* workspaces */
-  #workspaces button {
-    padding: 0 0.4rem;
+  /* tags */
+  #tags button {
+    margin: 0 0.2rem;
     background: transparent;
-    color: #${base06};
+    color: #${base01};
   }
 
-  #workspaces button:hover {
-    background: #${base02};
-    box-shadow: inset 0 -3px #${base0B};
+  #tags button.occupied {
+    color: #${base05}
   }
 
-  #workspaces button.focused {
-    box-shadow: inset 0 -3px #${base0B};
+  #tags button.focused {
+    color: #${base0B};
   }
 
-  #workspaces button.urgent {
+  #tags button.urgent {
     background: #${base08};
-  }
-
-  #mode {
-    margin-left: 2rem;
-    margin-right: 2rem;
   }
 
   #tray,
@@ -51,7 +45,7 @@ with colorscheme.colors; ''
   #pulseaudio,
   #backlight,
   #battery,
-  #language,
+  #mpd,
   #clock {
     background: #${base04};
     padding: 2px 10px;
@@ -61,14 +55,14 @@ with colorscheme.colors; ''
   }
 
   #window,
-  #workspaces {
+  #tags {
     margin: 0 4px;
   }
 
-  .modules-left > widget:first-child > #workspaces {
+  .modules-left > widget:first-child > #tags {
     margin-left: 0;
   }
-  .modules-right > widget:first-child > #workspaces {
+  .modules-right > widget:first-child > #tags {
     margin-right: 0;
   }
 ''

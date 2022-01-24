@@ -13,7 +13,6 @@
     ./programs/ncmpcpp.nix
     ./programs/mpv.nix
     ./programs/zathura.nix
-    ./programs/sway
     ./programs/exa.nix
     ./programs/fzf.nix
     ./programs/git.nix
@@ -26,6 +25,7 @@
     ./programs/newsboat.nix
     ./programs/calcurse
     ./programs/bat.nix
+    ./programs/river
 
     ./services/mpd.nix
     ./services/emacs.nix
