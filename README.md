@@ -10,7 +10,7 @@ First sorry about my English, I'm learning that language and I've some difficult
 
 ## Details
 
-![screenshot](.images/screenshot.png)
+![screenshot](screenshot.png)
 
 |                     |                                                                                                                      |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------- |
